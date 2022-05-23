@@ -21,6 +21,20 @@ def factores_primos (n):
         L = [i for i in range(2,n) if es_primo(i) and n % i == 0]
     
     return L
+def prime_factoirzation(n):
+    pf = []
+    for p in factores_primos(n):
+        for k in range(1,n+1):
+            while n % p**k == 0:
+                pf.append(p)
 
-print (factores_primos(1))
-print(es_primo(0))
+    return pf
+
+print(prime_factoirzation(10))
+        
+
+
+
+
+
+
